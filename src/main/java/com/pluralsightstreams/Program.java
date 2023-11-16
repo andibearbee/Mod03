@@ -5,15 +5,15 @@ import java.util.*;
 import static com.pluralsightstreams.MenuOptions.*;
 
 public class Program {
-    public static void main(MenuOptions) {
+        public static void main(String[] args) {
 
             System.out.println("Welcome to all things Friends!" + "\n" + "What would you like to do? \n" +
                     "Options: \n" +
-                    " 1: Display All Friends \n" +
+                    "1: Display All Friends \n" +
                     "2: Search Friends by Name \n" +
                     "3: Sort by Age \n" +
                     "4: Average Age of all Characters \n" +
-                    "5: Oldest Friend \n" + "6: Youngest Friend \n");
+                    "5: Oldest Friend \n" + "6: Youngest Friend \n" + "7: Exit \n");
 
             List<Person> friendsCharacters = new ArrayList<Person>();
             friendsCharacters.add(new Person("Phoebe", "Buffay", 26));
@@ -33,9 +33,19 @@ public class Program {
 
             switch (menuChoice) {
                     case 1:
-                            displayAll();
-
-                            //cases continue
+                            displayAll(friendsCharacters);
+                    case 2:
+                            byAge(friendsCharacters);
+                    case 3:
+                            searchByName(friendsCharacters);
+                    case 4:
+                            getAverage(friendsCharacters);
+                    case 5:
+                            getMaxAge(friendsCharacters);
+                    case 6:
+                            getMinAge(friendsCharacters);
+                    case 7:
+                        //exit
 
 
             }
